@@ -1,0 +1,60 @@
+<form class="form-horizontal  page-header container2">
+
+    <legend>Cadastrar Produto</legend>
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="nome">Nome</label>
+        <div class="col-md-4">
+            <input ng-model="produto.nome" type="text" placeholder="Ex: Leite em Pó Itamber 500g" class="form-control input-md" required="">
+        </div>
+    </div>
+
+
+    <!-- Text input-->
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="cod">Cod. Barra</label>
+        <div class="col-md-4">
+            <input ng-model="produto.codigo" type="text" placeholder="0123456789" class="form-control input-md" required="">
+
+        </div>
+    </div>
+
+    <!-- Text input-->
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="setor">Setor</label>
+        <div class="col-md-4">
+            <input ng-model="produto.setor" type="text" placeholder="Frios" class="form-control input-md" required="">
+
+        </div>
+    </div>
+
+    <!-- Text input-->
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="preco">Preço (R$)</label>
+        <div class="col-md-4">
+            <input ng-model="produto.preco" type="text" placeholder="5.00" class="form-control input-md" required="">
+
+        </div>
+    </div>
+
+    <!--<div class="form-group">
+        <label class="col-md-4 control-label" for="descri">Disponibilidade</label>
+        <div class="col-md-4 control-label">
+            <select id="descri" name="descri" type="gender" class="form-control input-md">
+                          <option value="disponivel">Disponivel</option>
+                          <option value="indisponivel">Indisponivel</option>
+                      </select>
+        </div>
+    </div>-->
+    <!-- Button -->
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="salvar"></label>
+        <div class="col-md-4">
+            <button  ng-disabled="true" class="btn btn-default">Cancelar</button>
+            <button ng-click="salvar()" class="btn btn-primary pull-right">Salvar</button>
+        </div>
+    </div>
+
+    </fieldset>
+
+</form>
+<pre>{{produto | json}}</pre>
