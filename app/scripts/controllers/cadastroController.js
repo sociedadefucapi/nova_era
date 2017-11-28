@@ -2,7 +2,7 @@
 
 angular.module('novaEraApp')
     .controller('cadastroController', function ($scope, $rootScope, $http, $location, $routeParams) {
-        var URL_API = "http://localhost/api/produto";
+        var URL_API = "http://localhost/api/produto.php";
 
         $scope.editando = false;
 
