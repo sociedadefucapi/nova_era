@@ -22,7 +22,8 @@ angular.module('novaEraApp')
                     codigo: '',
                     setor: '',
                     preco: '',
-                    disponibilidade:'1'
+                    disponibilidade:'',
+                    imagem: ''
                 };
             }
         };
@@ -32,10 +33,9 @@ angular.module('novaEraApp')
         };
 
         $scope.salvar = function () {
-            console.log($scope.produto);
             $http.post(URL_API, $scope.produto).then(function () {
-                console.log("produto salvo");
-                $location.path("/");
+                // $location.path("/");
+                $scope.init();
             }).catch(function (error) {
                 // console.log(error);
                 console.log("Erro ao salvar produto!");
