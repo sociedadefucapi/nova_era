@@ -14,11 +14,11 @@ angular.module('novaEraApp')
                     console.log(routeParams);
                 }).catch(function (error) {
                     console.log(error);
-                    toastr.error("Erro ao recuperar produto");
                 });
             } else {
                 $scope.produto = {
                     nome: '',
+                    marca: '',
                     codigo: '',
                     setor: '',
                     preco: '',
@@ -34,7 +34,7 @@ angular.module('novaEraApp')
 
         $scope.salvar = function () {
             $http.post(URL_API, $scope.produto).then(function () {
-                // $location.path("/");
+                $location.path("/");
                 $scope.init();
             }).catch(function (error) {
                 // console.log(error);
