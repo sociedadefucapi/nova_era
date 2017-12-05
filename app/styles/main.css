@@ -5,9 +5,7 @@
   padding: 0.2em 0;
 }
 
-body {
-  padding: 0;
-}
+
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
@@ -62,7 +60,6 @@ body {
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 730px;
   }
 
   /* Remove the padding we set earlier */
@@ -83,7 +80,9 @@ body {
 }
 
 body {
-    background-color: #eee;
+  background-image: url('/../../images/background.jpg');
+  background-attachment: fixed;
+  background-size:100% 100%;
 }
 
 *[role="form"] {
@@ -117,4 +116,35 @@ body {
 
 .encarte {
   height: 100%;
+}
+
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  z-index: 15;
+  width: 60%;
+  padding-left: 0;
+  margin-left: -30%;
+  text-align: center;
+  list-style: none;
+}
+.carousel-indicators li {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 1px;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: #000 \9;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid #fff;
+  border-radius: 10px;
+}
+.carousel-indicators .active {
+  width: 12px;
+  height: 12px;
+  margin: 0;
+  background-color: #fff;
 }

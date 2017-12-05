@@ -10,11 +10,15 @@ angular.module('novaEraApp').controller('mainController', function ($scope, $roo
     $scope.listar = function () {
         $http.get(URL_API).then(function (response) {
             $scope.produtos = response.data;
+            $scope.promocoes = response.data;
         }).catch(function (error) {
             console.log(error);
             toastr.error("Erro ao recuperar lista de produtos!");
         });
 
+    };
+    $scope.adicionarCarrinho = function(produto){
+        $scope.carrinho = produto;
     };
 
     $scope.selecionarProduto = function(produto){
